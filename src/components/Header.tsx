@@ -23,11 +23,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* PBS Kids Logo */}
-            <div className="flex items-center space-x-4">
-              <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">PBS<br/>KIDS</span>
-              </div>
+            {/* Learning Leopards Logo */}
+            <div className="flex items-center">
+              <span className="text-black font-bold text-sm">Learning<br/>Leopards</span>
             </div>
 
             {/* Navigation Buttons */}
@@ -46,12 +44,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
                 <span className="text-purple-600 font-bold">VIDEOS</span>
               </button>
 
-              {/* WETA PBS Logo */}
-              <div className="flex items-center space-x-2">
-                <span className="bg-red-500 text-white px-2 py-1 text-xs font-bold">WETA</span>
-                <div className="bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">PBS</span>
-                </div>
+              {/* WETA Learning Leopards Logo */}
+              <div className="flex items-center">
+                <span className="text-black font-bold text-xs">Learning Leopards</span>
               </div>
             </div>
 

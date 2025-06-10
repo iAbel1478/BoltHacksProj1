@@ -5,19 +5,21 @@ const Footer: React.FC = () => {
     <footer className="bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* PBS Kids Logo and Info */}
+          {/* Learning Leopards Logo and Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">PBS<br/>KIDS</span>
+              <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center">
+                <span className="text-black font-bold text-sm">Learning<br/>Leopards</span>
               </div>
               <div>
-                <h3 className="text-2xl font-bold">PBS KIDS</h3>
-                <p className="text-blue-200">Educational games and videos for children</p>
+                <h3 className="text-2xl font-bold">Learning Leopards</h3>
+                <p className="text-gray-600">
+                  Learning Leopards offers educational games, videos, and activities that help children
+                </p>
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              PBS KIDS offers educational games, videos, and activities that help children 
+              Learning Leopards offers educational games, videos, and activities that help children 
               learn and grow. Our content is designed by education experts to support learning 
               through play.
             </p>
@@ -62,7 +64,7 @@ const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 PBS KIDS. All rights reserved. | Privacy Policy | Terms of Use
+            © 2025 Learning Leopards. All rights reserved. | Privacy Policy | Terms of Use
           </div>
           <div className="text-gray-400 text-sm">
             Educational content designed for children ages 2-8
