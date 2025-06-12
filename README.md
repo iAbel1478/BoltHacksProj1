@@ -1,2 +1,2 @@
 # BoltHacksProj1
-[https://learningleopards.netlify.app/]
+https://learningleopards.netlify.app/
