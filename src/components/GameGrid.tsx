@@ -200,7 +200,7 @@ const GameGrid: React.FC<GameGridProps> = ({ searchQuery, categoryFilter }) => {
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
                 onClick={() => setVisibleCount(c => Math.min(c + 50, filteredGames.length))}
               >
-                Load More Games ({Math.min(50, filteredGames.length - visibleCount)} more)
+                Load More Games
               </button>
             </div>
           )}
