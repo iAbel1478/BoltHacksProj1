@@ -129,7 +129,7 @@ const generatedGames: Game[] = Array.from({ length: 192 }, (_, i) => ({
 const allGames = [...originalGames, ...generatedGames];
 
 const GameGrid: React.FC<GameGridProps> = ({ searchQuery, categoryFilter }) => {
-  const [visibleCount, setVisibleCount] = useState(8);
+  const [visibleCount, setVisibleCount] = useState(50);
 
   const filteredGames = useMemo(() => {
     return allGames.filter(game => {
@@ -198,9 +198,9 @@ const GameGrid: React.FC<GameGridProps> = ({ searchQuery, categoryFilter }) => {
             <div className="text-center mt-12">
               <button
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
-                onClick={() => setVisibleCount(c => Math.min(c + 8, filteredGames.length))}
+                onClick={() => setVisibleCount(c => Math.min(c + 50, filteredGames.length))}
               >
-                Load More Games
+                Load More Games ({Math.min(50, filteredGames.length - visibleCount)} more)
               </button>
             </div>
           )}
