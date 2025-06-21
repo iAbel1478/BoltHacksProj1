@@ -4,7 +4,7 @@ export interface Game {
   character: string;
   category: string;
   image: string;
-  description: string; 
+  description: string;
   rating: number;
   ageRange: string;
   isNew?: boolean;
