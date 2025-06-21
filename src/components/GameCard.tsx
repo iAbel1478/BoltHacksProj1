@@ -1,17 +1,6 @@
 import React from 'react';
 import { Play, Star } from 'lucide-react';
-
-interface Game {
-  id: number;
-  title: string;
-  character: string;
-  category: string;
-  image: string;
-  description: string;
-  rating: number;
-  ageRange: string;
-  isNew?: boolean;
-}
+import { Game } from '../data/games';
 
 interface GameCardProps {
   game: Game;
@@ -28,13 +17,21 @@ const GameCard: React.FC<GameCardProps> = ({ game, isCarousel = false }) => {
       'Lyla in the Loop': 'bg-purple-500',
       'Arthur': 'bg-blue-500',
       'Elinor Wonders Why': 'bg-teal-500',
+      'Learning Leopards': 'bg-orange-500',
     };
     return colors[character as keyof typeof colors] || 'bg-gray-400';
   };
 
+  const handleGameClick = () => {
+    window.open(`/game/${game.id}`, '_blank');
+  };
+
   if (isCarousel) {
     return (
-      <div className="flex-shrink-0 w-48 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+      <div 
+        className="flex-shrink-0 w-48 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+        onClick={handleGameClick}
+      >
         <div className="relative">
           <img
             src={game.image}
@@ -58,7 +55,10 @@ const GameCard: React.FC<GameCardProps> = ({ game, isCarousel = false }) => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer relative">
+    <div 
+      className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer relative"
+      onClick={handleGameClick}
+    >
       {game.isNew && (
         <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">
           NEW!

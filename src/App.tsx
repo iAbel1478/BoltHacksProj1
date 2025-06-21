@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import GameGrid from './components/GameGrid';
 import Footer from './components/Footer';
+import GamePage from './components/GamePage';
 
-function App() {
+function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('All Games');
 
@@ -29,6 +31,17 @@ function App() {
       />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/game/:id" element={<GamePage />} />
+      </Routes>
+    </Router>
   );
 }
 
