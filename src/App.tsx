@@ -19,7 +19,7 @@ function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-orange-100 via-yellow-100 to-pink-100">
       <Header 
         onSearch={handleSearch} 
         onCategoryFilter={handleCategoryFilter} 

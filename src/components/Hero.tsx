@@ -1074,67 +1074,76 @@ const Hero: React.FC = () => {
   const currentGames = featuredGames.slice(0, loadedSections * gamesPerSection);
 
   return (
-    <section className="relative min-h-[900px] overflow-hidden bg-gradient-to-b from-sky-200 to-green-200">
+    <section className="relative min-h-[900px] overflow-hidden bg-gradient-to-br from-orange-300 via-yellow-300 to-pink-300">
       {/* Background Image */}
       <img
         src="learning-leopard2.jpeg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
-        style={{ filter: 'brightness(0.95)' }}
+        style={{ filter: 'brightness(0.9) saturate(1.2)' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-orange-500/30 via-transparent to-transparent z-0" />
 
       {/* Top Row: Logo and Buttons */}
       <div className="absolute top-8 left-8 flex items-center space-x-8 z-20">
         {/* Circular Logo */}
-        <div className="w-28 h-28 bg-white rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-blue-400">
-          <span className="text-blue-600 font-extrabold text-3xl leading-none">LL</span>
-          <span className="text-green-600 font-bold text-xs mt-1">Learning<br/>Leopards</span>
+        <div className="w-28 h-28 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex flex-col items-center justify-center shadow-2xl border-4 border-yellow-300 transform hover:scale-105 transition-transform">
+          <span className="text-white font-black text-3xl leading-none drop-shadow-lg">LL</span>
+          <span className="text-yellow-200 font-bold text-xs mt-1 drop-shadow-lg">Learning<br/>Leopards</span>
         </div>
         {/* GAMES & VIDEOS Buttons */}
         <div className="flex space-x-6">
-          <button className="w-24 h-24 bg-white rounded-full flex flex-col items-center justify-center shadow-lg border-2 border-purple-400 hover:bg-purple-50 transition">
-            <span className="text-purple-600 text-3xl mb-1">🎮</span>
-            <span className="text-purple-700 font-bold text-lg">GAMES</span>
+          <button className="w-24 h-24 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-yellow-300 hover:scale-110 transition-all duration-300 transform">
+            <span className="text-white text-3xl mb-1 drop-shadow-lg">🎮</span>
+            <span className="text-white font-black text-lg drop-shadow-lg">GAMES</span>
           </button>
-          <button className="w-24 h-24 bg-white rounded-full flex flex-col items-center justify-center shadow-lg border-2 border-purple-400 hover:bg-purple-50 transition">
-            <span className="text-purple-600 text-3xl mb-1">▶</span>
-            <span className="text-purple-700 font-bold text-lg">VIDEOS</span>
+          <button className="w-24 h-24 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-yellow-300 hover:scale-110 transition-all duration-300 transform">
+            <span className="text-white text-3xl mb-1 drop-shadow-lg">▶</span>
+            <span className="text-white font-black text-lg drop-shadow-lg">VIDEOS</span>
           </button>
         </div>
       </div>
       {/* Top Right Logo */}
       <div className="absolute top-10 right-12 z-20 flex items-center space-x-4">
-        <span className="text-black font-extrabold text-2xl tracking-tight">WETA</span>
-        <span className="text-blue-700 font-extrabold text-2xl tracking-tight">LL</span>
+        <span className="text-white font-black text-2xl tracking-tight drop-shadow-lg">WETA</span>
+        <span className="text-yellow-300 font-black text-2xl tracking-tight drop-shadow-lg">LL</span>
       </div>
 
       {/* Hero Carousel */}
       <div className="absolute top-52 right-3 z-10 flex flex-col items-center">
-        <div className="bg-white rounded-3xl shadow-2xl border-4 border-white p-4 flex flex-col items-center w-[500px] max-w-full">
-          <img
-            src={featuredGames[currentSlide].image}
-            alt={featuredGames[currentSlide].title}
-            className="rounded-2xl w-full h-[280px] object-cover border-2 border-gray-200"
-          />
-          <div className="mt-4 text-center">
-            <h2 className="text-2xl font-extrabold text-purple-700 mb-2">{featuredGames[currentSlide].title}</h2>
-            <p className="text-gray-700 text-lg">{featuredGames[currentSlide].description}</p>
+        <div className="bg-gradient-to-br from-white via-yellow-50 to-orange-50 rounded-3xl shadow-2xl border-4 border-yellow-300 p-6 flex flex-col items-center w-[500px] max-w-full transform hover:scale-105 transition-transform duration-300">
+          <div className="relative w-full">
+            <img
+              src={featuredGames[currentSlide].image}
+              alt={featuredGames[currentSlide].title}
+              className="rounded-2xl w-full h-[280px] object-cover border-4 border-orange-200 shadow-lg"
+            />
+            <div className="absolute top-2 right-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-black px-3 py-1 rounded-full shadow-lg">
+              NEW!
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <h2 className="text-3xl font-black text-orange-600 mb-3 drop-shadow-sm" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+              {featuredGames[currentSlide].title}
+            </h2>
+            <p className="text-gray-700 text-lg font-semibold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+              {featuredGames[currentSlide].description}
+            </p>
           </div>
         </div>
         {/* Slide Indicators */}
-        <div className="flex space-x-2 mt-4 justify-center w-[500px]">
+        <div className="flex space-x-3 mt-6 justify-center w-[500px]">
           {Array.from({ length: totalSections }).map((_, idx) => (
             <span
               key={idx}
-              className={`w-3 h-3 rounded-full ${idx === currentSection ? 'bg-purple-500' : 'bg-gray-300'} transition`}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${idx === currentSection ? 'bg-gradient-to-r from-orange-500 to-red-500 shadow-lg' : 'bg-gray-300'}`}
             />
           ))}
         </div>
         {/* Play Button Centered */}
         <div className="flex justify-center w-[500px]">
-          <button className="mt-4 bg-white hover:bg-gray-100 text-purple-600 font-bold py-3 px-10 rounded-full text-xl shadow-lg transition-colors transform hover:scale-105">
-            PLAY
+          <button className="mt-6 bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 hover:from-green-600 hover:via-blue-600 hover:to-purple-700 text-white font-black py-4 px-12 rounded-full text-2xl shadow-2xl transition-all duration-300 transform hover:scale-110 hover:shadow-3xl border-4 border-yellow-300" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+            🎮 PLAY NOW! 🎮
           </button>
         </div>
       </div>
@@ -1143,7 +1152,7 @@ const Hero: React.FC = () => {
       <div className="absolute left-0 right-0 bottom-8 flex items-center justify-center z-20">
         <button
           onClick={prevSlide}
-          className="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-4 mx-2 shadow-lg transition-colors"
+          className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full p-4 mx-2 shadow-xl transition-all duration-300 transform hover:scale-110 border-2 border-yellow-300"
           aria-label="Previous"
         >
           <ChevronLeft className="w-8 h-8" />
@@ -1161,7 +1170,7 @@ const Hero: React.FC = () => {
 
           return (
             <div
-              className="overflow-hidden bg-white/80 rounded-2xl shadow-lg border border-gray-200 px-4 py-2"
+              className="overflow-hidden bg-gradient-to-r from-white/90 to-yellow-50/90 rounded-2xl shadow-2xl border-4 border-yellow-300 px-4 py-2"
               style={{ width: `${visibleContainerWidth}px` }}
             >
               <div
@@ -1175,13 +1184,13 @@ const Hero: React.FC = () => {
                   <button
                     key={i}
                     onClick={() => setCurrentSlide(i)}
-                    className={`transition-transform duration-200 ${i === currentSlide ? 'scale-110' : 'opacity-80 hover:opacity-100'}`}
+                    className={`transition-all duration-300 ${i === currentSlide ? 'scale-125 shadow-2xl' : 'opacity-80 hover:opacity-100 hover:scale-110'}`}
                     style={{ width: `${cardWidth}px`, minWidth: `${cardWidth}px`, maxWidth: `${cardWidth}px`, background: 'transparent' }}
                   >
                     <img
                       src={game.image}
                       alt={game.title}
-                      className="w-full h-16 object-cover rounded-xl border-2 border-white shadow"
+                      className="w-full h-16 object-cover rounded-xl border-4 border-yellow-300 shadow-lg"
                     />
                   </button>
                 ))}
@@ -1191,7 +1200,7 @@ const Hero: React.FC = () => {
         })()}
         <button
           onClick={nextSlide}
-          className="bg-pink-500 hover:bg-pink-600 text-white rounded-full p-4 mx-2 shadow-lg transition-colors"
+          className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full p-4 mx-2 shadow-xl transition-all duration-300 transform hover:scale-110 border-2 border-yellow-300"
           aria-label="Next"
         >
           <ChevronRight className="w-8 h-8" />
