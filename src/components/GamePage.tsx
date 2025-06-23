@@ -7,6 +7,16 @@ const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const game = allGames.find(g => g.id === parseInt(id || '0'));
 
+  const handlePlayClick = () => {
+    // For game ID 1, redirect to LearningLeopards_Old folder
+    if (game?.id === 1) {
+      window.open('../LearningLeopards_Old/index.html', '_blank');
+    } else {
+      // For other games, you can add actual game logic here
+      alert('Game launching...');
+    }
+  };
+
   if (!game) {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -64,7 +74,10 @@ const GamePage: React.FC = () => {
                 className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                <button className="bg-white/95 hover:bg-white rounded-full p-6 transition-all duration-200 transform hover:scale-110 shadow-lg">
+                <button 
+                  onClick={handlePlayClick}
+                  className="bg-white/95 hover:bg-white rounded-full p-6 transition-all duration-200 transform hover:scale-110 shadow-lg cursor-pointer"
+                >
                   <Play className="w-12 h-12 text-purple-600 ml-1" />
                 </button>
               </div>
@@ -154,7 +167,10 @@ const GamePage: React.FC = () => {
             </div>
 
             {/* Play Button */}
-            <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-xl text-xl transition-all duration-200 transform hover:scale-105 shadow-lg">
+            <button 
+              onClick={handlePlayClick}
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-xl text-xl transition-all duration-200 transform hover:scale-105 shadow-lg cursor-pointer"
+            >
               Start Playing Now!
             </button>
           </div>
