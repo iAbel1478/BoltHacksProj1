@@ -1,20 +1,21 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Play, Star, Clock, Users, BookOpen, Target } from 'lucide-react';
-import { allGames } from '../data/games';
+import { allGames } from '../data/games-with-geography';
+import GeographyGameEmbed from './GeographyGameEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const game = allGames.find(g => g.id === parseInt(id || '0'));
 
+  // If it's the World Click Explorer game (ID 1), render the embedded game
+  if (game?.id === 1) {
+    return <GeographyGameEmbed />;
+  }
+
   const handlePlayClick = () => {
-    // For game ID 1, redirect to LearningLeopards_Old folder
-    if (game?.id === 1) {
-      window.open('../LearningLeopards_Old/index.html', '_blank');
-    } else {
-      // For other games, you can add actual game logic here
-      alert('Game launching...');
-    }
+    // For other games, you can add actual game logic here
+    alert('Game launching...');
   };
 
   if (!game) {

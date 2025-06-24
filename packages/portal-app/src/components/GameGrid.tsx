@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import GameCard from './GameCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { allGames } from '../data/games';
+import { allGames } from '../data/games-with-geography';
 
 interface GameGridProps {
   searchQuery: string;

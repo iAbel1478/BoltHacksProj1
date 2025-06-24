@@ -1,17 +1,13 @@
 {
-  "name": "learning-leopards-game-portal",
+  "name": "portal-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "dev": "cd packages/portal-app && npm run dev",
-    "build": "cd packages/portal-app && npm run build",
-    "build-all": "cd packages/portal-app && npm run build",
-    "lint": "cd packages/portal-app && npm run lint",
-    "preview": "cd packages/portal-app && npm run preview"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
@@ -35,4 +31,4 @@
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
   }
-}
+} 
