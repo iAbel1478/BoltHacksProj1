@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Play, Star, Clock, Users, BookOpen, Target } from 'lucide-react';
 import { allGames } from '../data/games-with-geography';
 import GeographyGameEmbed from './GeographyGameEmbed';
+import ArtsyQuizEmbed from './ArtsyQuizEmbed';
+import CalcQuestGeniusEmbed from './CalcQuestGeniusEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -11,6 +13,16 @@ const GamePage: React.FC = () => {
   // If it's the World Click Explorer game (ID 1), render the embedded game
   if (game?.id === 1) {
     return <GeographyGameEmbed />;
+  }
+
+  // If it's the Artsy Quiz Palooza game (ID 2), render the embedded game
+  if (game?.id === 2) {
+    return <ArtsyQuizEmbed />;
+  }
+
+  // If it's the Calc Quest Genius game (ID 3), render the embedded game
+  if (game?.id === 3) {
+    return <CalcQuestGeniusEmbed />;
   }
 
   const handlePlayClick = () => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Play, Star } from 'lucide-react';
-import { Game } from '../data/games';
+import { Link } from 'react-router-dom';
+import { Game } from '../data/games-with-geography';
 
 interface GameCardProps {
   game: Game;
