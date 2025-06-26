@@ -5,6 +5,9 @@ import { allGames } from '../data/games-with-geography';
 import GeographyGameEmbed from './GeographyGameEmbed';
 import ArtsyQuizEmbed from './ArtsyQuizEmbed';
 import CalcQuestGeniusEmbed from './CalcQuestGeniusEmbed';
+import CampMemoryTrailsEmbed from './CampMemoryTrailsEmbed';
+import ClueShiftMysteryEmbed from './ClueShiftMysteryEmbed';
+import BingoEnEspanolEmbed from './BingoEnEspanolEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -23,6 +26,21 @@ const GamePage: React.FC = () => {
   // If it's the Calc Quest Genius game (ID 3), render the embedded game
   if (game?.id === 3) {
     return <CalcQuestGeniusEmbed />;
+  }
+
+  // If it's the Camp Memory Trails game (ID 4), render the embedded game
+  if (game?.id === 4) {
+    return <CampMemoryTrailsEmbed />;
+  }
+
+  // If it's the Clue Shift Mystery Web game (ID 5), render the embedded game
+  if (game?.id === 5) {
+    return <ClueShiftMysteryEmbed />;
+  }
+
+  // If it's the Bingo en Español Amigos game (ID 6), render the embedded game
+  if (game?.id === 6) {
+    return <BingoEnEspanolEmbed />;
   }
 
   const handlePlayClick = () => {

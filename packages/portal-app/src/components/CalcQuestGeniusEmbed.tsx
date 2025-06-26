@@ -1,22 +1,20 @@
-import React from "react";
-import { Toaster } from "./ui/toaster";
-import { TooltipProvider } from "./ui/tooltip";
+import React, { Suspense } from 'react';
 
-const CALC_QUEST_URL = "/calc-quest-genius-main (1)/dist/index.html";
+// Lazy load the main Calc Quest Genius game page
+const CalcQuestGeniusIndex = React.lazy(() => import('../../../calc-quest-genius-main/src/pages/Index'));
 
 const CalcQuestGeniusEmbed: React.FC = () => {
   return (
-    <TooltipProvider>
-      <div style={{ width: "100%", height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <iframe
-          src={CALC_QUEST_URL}
-          title="Calc Quest Genius"
-          style={{ width: "100%", height: "100%", border: "none", borderRadius: 16 }}
-          allow="clipboard-write; clipboard-read"
-        />
+    <Suspense fallback={
+      <div className="flex items-center justify-center h-96">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+          <p className="text-xl text-indigo-600 font-semibold">Loading Calc Quest Genius...</p>
+        </div>
       </div>
-      <Toaster />
-    </TooltipProvider>
+    }>
+      <CalcQuestGeniusIndex />
+    </Suspense>
   );
 };
 
