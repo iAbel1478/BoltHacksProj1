@@ -104,5 +104,35 @@ export const allGames: Game[] = [
     learningObjectives: ["Spanish vocabulary", "Language comprehension", "Pronunciation practice", "Cultural awareness"],
     skills: ["Language learning", "Memory", "Listening", "Social interaction"],
     gameplayDescription: "Players select difficulty levels and translation directions, then play bingo with Spanish words and phrases. Features audio pronunciation, translation tooltips, and multiple game modes for different learning styles."
+  },
+  {
+    id: 7,
+    title: "Code Glitch Busters",
+    character: "Code Detective",
+    category: "Programming & Logic",
+    image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=400",
+    description: "Debug code, fix bugs, and learn programming concepts through interactive challenges!",
+    rating: 4.9,
+    ageRange: "8-16",
+    isNew: true,
+    longDescription: "Become a Code Glitch Buster! Debug programs, fix bugs, and learn essential programming concepts through hands-on challenges. Perfect for young coders who want to develop logical thinking and problem-solving skills.",
+    learningObjectives: ["Debugging skills", "Programming logic", "Problem identification", "Code analysis"],
+    skills: ["Logical thinking", "Attention to detail", "Problem solving", "Computational thinking"],
+    gameplayDescription: "Players will identify and fix bugs in code snippets, learn programming concepts, and solve coding challenges. The game features multiple difficulty levels and covers various programming topics suitable for beginners."
+  },
+  {
+    id: 8,
+    title: "Cosmic Constellation Cruiser",
+    character: "Space Explorer",
+    category: "Science & Astronomy",
+    image: "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=400",
+    description: "Navigate through space, learn about constellations, and explore the cosmos!",
+    rating: 4.8,
+    ageRange: "7-14",
+    isNew: true,
+    longDescription: "Embark on an interstellar adventure with Cosmic Constellation Cruiser! Navigate through space, learn about different constellations, and discover fascinating facts about the universe. Perfect for young astronomers and space enthusiasts.",
+    learningObjectives: ["Constellation recognition", "Space navigation", "Astronomical knowledge", "Spatial reasoning"],
+    skills: ["Astronomy", "Navigation", "Pattern recognition", "Scientific curiosity"],
+    gameplayDescription: "Players will pilot their cruiser through space, identify constellations, learn about stars and planets, and complete space exploration missions. Features beautiful space visuals and educational content about our universe."
   }
 ]; 

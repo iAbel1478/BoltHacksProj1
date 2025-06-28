@@ -8,6 +8,8 @@ import CalcQuestGeniusEmbed from './CalcQuestGeniusEmbed';
 import CampMemoryTrailsEmbed from './CampMemoryTrailsEmbed';
 import ClueShiftMysteryEmbed from './ClueShiftMysteryEmbed';
 import BingoEnEspanolEmbed from './BingoEnEspanolEmbed';
+import CodeGlitchBustersEmbed from './CodeGlitchBustersEmbed';
+import CosmicConstellationEmbed from './CosmicConstellationEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -43,6 +45,16 @@ const GamePage: React.FC = () => {
     return <BingoEnEspanolEmbed />;
   }
 
+  // If it's the Code Glitch Busters game (ID 7), render the embedded game
+  if (game?.id === 7) {
+    return <CodeGlitchBustersEmbed />;
+  }
+
+  // If it's the Cosmic Constellation Cruiser game (ID 8), render the embedded game
+  if (game?.id === 8) {
+    return <CosmicConstellationEmbed />;
+  }
+
   const handlePlayClick = () => {
     // For other games, you can add actual game logic here
     alert('Game launching...');
@@ -74,6 +86,8 @@ const GamePage: React.FC = () => {
       'Arthur': 'bg-blue-500',
       'Elinor Wonders Why': 'bg-teal-500',
       'Learning Leopards': 'bg-orange-500',
+      'Code Detective': 'bg-indigo-500',
+      'Space Explorer': 'bg-purple-600',
     };
     return colors[character as keyof typeof colors] || 'bg-gray-400';
   };
