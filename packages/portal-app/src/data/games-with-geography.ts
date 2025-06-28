@@ -134,5 +134,20 @@ export const allGames: Game[] = [
     learningObjectives: ["Constellation recognition", "Space navigation", "Astronomical knowledge", "Spatial reasoning"],
     skills: ["Astronomy", "Navigation", "Pattern recognition", "Scientific curiosity"],
     gameplayDescription: "Players will pilot their cruiser through space, identify constellations, learn about stars and planets, and complete space exploration missions. Features beautiful space visuals and educational content about our universe."
+  },
+  {
+    id: 9,
+    title: "Ball City Bounce",
+    character: "Basketball",
+    category: "Sports & Physics",
+    image: "https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?auto=compress&cs=tinysrgb&w=400",
+    description: "Master the art of basketball shooting with physics-based gameplay!",
+    rating: 4.8,
+    ageRange: "6-12",
+    isNew: true,
+    longDescription: "Experience the thrill of basketball with realistic physics! Hold and drag to aim, release to shoot, and score as many baskets as you can. Unlock new basketball skins and compare your skills to NBA legends.",
+    learningObjectives: ["Physics understanding", "Hand-eye coordination", "Strategic thinking", "Sports skills"],
+    skills: ["Coordination", "Physics concepts", "Sports knowledge", "Problem-solving"],
+    gameplayDescription: "Players will learn about trajectory, momentum, and gravity while practicing basketball shooting. The game features realistic physics, customizable basketball skins, and NBA player comparisons to make learning fun and engaging."
   }
 ]; 

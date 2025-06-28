@@ -10,6 +10,7 @@ import ClueShiftMysteryEmbed from './ClueShiftMysteryEmbed';
 import BingoEnEspanolEmbed from './BingoEnEspanolEmbed';
 import CodeGlitchBustersEmbed from './CodeGlitchBustersEmbed';
 import CosmicConstellationEmbed from './CosmicConstellationEmbed';
+import BallCityBounceEmbed from './BallCityBounceEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -55,6 +56,11 @@ const GamePage: React.FC = () => {
     return <CosmicConstellationEmbed />;
   }
 
+  // If it's the Ball City Bounce game (ID 9), render the embedded game
+  if (game?.id === 9) {
+    return <BallCityBounceEmbed />;
+  }
+
   const handlePlayClick = () => {
     // For other games, you can add actual game logic here
     alert('Game launching...');
@@ -88,6 +94,7 @@ const GamePage: React.FC = () => {
       'Learning Leopards': 'bg-orange-500',
       'Code Detective': 'bg-indigo-500',
       'Space Explorer': 'bg-purple-600',
+      'Basketball': 'bg-orange-600',
     };
     return colors[character as keyof typeof colors] || 'bg-gray-400';
   };

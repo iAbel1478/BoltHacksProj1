@@ -2817,5 +2817,17 @@ export const allGames: Game[] = [
     learningObjectives: ["Comprehensive learning", "Skill integration", "Holistic development", "Learning joy"],
     skills: ["Integrated learning", "Comprehensive development", "Learning enthusiasm"],
     gameplayDescription: "Players will embark on an epic learning journey that integrates all educational areas, from literacy and math to science, social skills, and character development, creating a comprehensive and joyful learning experience."
+  },
+  {
+    id: 201,
+    title: "Ball City Bounce",
+    character: "Basketball",
+    category: "Sports & Physics",
+    image: "https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?auto=compress&cs=tinysrgb&w=400",
+    description: "Master the art of basketball shooting with physics-based gameplay!",
+    rating: 4.8,
+    ageRange: "6-12",
+    isNew: true,
+    longDescription: "Experience the thrill of basketball with realistic physics! Hold and drag to aim, release to shoot, and score as many baskets as you can. Unlock new basketball skins and compare your skills to NBA legends.",
   }
 ];
