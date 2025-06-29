@@ -204,5 +204,30 @@ export const allGames: Game[] = [
       "Self-regulation"
     ],
     gameplayDescription: "Players match emoji faces to feeling words, progressing through increasingly challenging levels. After each level, enjoy a calming breathing exercise before continuing. Encouraging messages and a friendly UI make learning about emotions fun and positive!"
+  },
+  {
+    id: 13,
+    title: "Germ Blaster Quiz Wars",
+    character: "Health Hero",
+    category: "Health & Science",
+    image: "https://em-content.zobj.net/source/microsoft-teams/363/microbe_1f9a0.png",
+    description: "Blast germs, answer health questions, and save the day!",
+    rating: 4.8,
+    ageRange: "7-14",
+    isNew: true,
+    longDescription: "Become a Health Hero in Germ Blaster Quiz Wars! Defend your school from invading germs by answering science and health questions. Blast viruses, bacteria, and more in this action-packed, educational shooter. Each level brings new challenges and fun facts about staying healthy!",
+    learningObjectives: [
+      "Health and hygiene knowledge",
+      "Disease prevention",
+      "Science facts",
+      "Quick thinking"
+    ],
+    skills: [
+      "Reflexes",
+      "Science reasoning",
+      "Memory",
+      "Hand-eye coordination"
+    ],
+    gameplayDescription: "Players shoot at invading germs and answer quiz questions to defeat them. Each level features new types of germs and health challenges. Use power-ups, keep your health bar up, and become the ultimate Germ Blaster!"
   }
 ]; 
