@@ -164,5 +164,20 @@ export const allGames: Game[] = [
     learningObjectives: ["Internet safety awareness", "Digital citizenship", "Online privacy", "Cyberbullying prevention"],
     skills: ["Digital literacy", "Critical thinking", "Safety awareness", "Responsible online behavior"],
     gameplayDescription: "Players will meet 12 different animal characters, each teaching a specific internet safety rule through engaging stories and interactive lessons. Complete the adventure to master all the essential rules for staying safe online!"
+  },
+  {
+    id: 11,
+    title: "Escape Lab Academy",
+    character: "Science Lab",
+    category: "Science & Problem Solving",
+    image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400",
+    description: "Complete scientific objectives to escape the laboratory before time runs out!",
+    rating: 4.9,
+    ageRange: "8-14",
+    isNew: true,
+    longDescription: "🚨 LABORATORY LOCKDOWN PROTOCOL ACTIVATED! Navigate through 4 specialized science labs - Cell Biology, Circuit Engineering, Chemical Balancing, and DNA Sequencing. Complete 12 scientific objectives across all labs within 10 minutes to escape!",
+    learningObjectives: ["Scientific method", "Laboratory safety", "Cross-disciplinary science", "Time management", "Problem-solving under pressure"],
+    skills: ["Critical thinking", "Scientific reasoning", "Time management", "Stress management", "Multi-tasking"],
+    gameplayDescription: "Players must complete 3 objectives in each of 4 specialized laboratory rooms, unlocking new areas as they progress. Each room focuses on different scientific disciplines: Cell Biology (microscopy and cell structure), Circuit Engineering (electrical circuits and logic), Chemical Balancing (chemical equations and reactions), and DNA Sequencing (genetic code and molecular biology). The game features a 10-minute countdown timer, adding urgency and teaching time management skills."
   }
 ]; 

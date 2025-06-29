@@ -12,6 +12,7 @@ import CodeGlitchBustersEmbed from './CodeGlitchBustersEmbed';
 import CosmicConstellationEmbed from './CosmicConstellationEmbed';
 import BallCityBounceEmbed from './BallCityBounceEmbed';
 import EmojiInternetAdventuresEmbed from './EmojiInternetAdventuresEmbed';
+import EscapeLabAcademyEmbed from './EscapeLabAcademyEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -65,6 +66,11 @@ const GamePage: React.FC = () => {
   // If it's the Emoji Internet Adventures game (ID 10), render the embedded game
   if (game?.id === 10) {
     return <EmojiInternetAdventuresEmbed />;
+  }
+
+  // If it's the Escape Lab Academy game (ID 11), render the embedded game
+  if (game?.id === 11) {
+    return <EscapeLabAcademyEmbed />;
   }
 
   const handlePlayClick = () => {
