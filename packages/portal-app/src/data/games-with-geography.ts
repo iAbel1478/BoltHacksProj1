@@ -179,5 +179,30 @@ export const allGames: Game[] = [
     learningObjectives: ["Scientific method", "Laboratory safety", "Cross-disciplinary science", "Time management", "Problem-solving under pressure"],
     skills: ["Critical thinking", "Scientific reasoning", "Time management", "Stress management", "Multi-tasking"],
     gameplayDescription: "Players must complete 3 objectives in each of 4 specialized laboratory rooms, unlocking new areas as they progress. Each room focuses on different scientific disciplines: Cell Biology (microscopy and cell structure), Circuit Engineering (electrical circuits and logic), Chemical Balancing (chemical equations and reactions), and DNA Sequencing (genetic code and molecular biology). The game features a 10-minute countdown timer, adding urgency and teaching time management skills."
+  },
+  {
+    id: 12,
+    title: "Feel Good Friends Match",
+    character: "Feelings Friends",
+    category: "Social & Emotional Learning",
+    image: "https://em-content.zobj.net/source/microsoft-teams/363/smiling-face-with-smiling-eyes_1f60a.png",
+    description: "Match faces with feelings and learn about emotions!",
+    rating: 4.8,
+    ageRange: "5-12",
+    isNew: true,
+    longDescription: "Join the Feel Good Friends on a journey to understand emotions! Match emoji faces with their feelings, progress through levels, and take mindful breathing breaks. This game helps kids recognize, name, and celebrate all kinds of feelings in a fun, supportive way.",
+    learningObjectives: [
+      "Emotion recognition",
+      "Empathy and understanding",
+      "Social-emotional learning",
+      "Mindfulness"
+    ],
+    skills: [
+      "Memory",
+      "Emotional intelligence",
+      "Matching",
+      "Self-regulation"
+    ],
+    gameplayDescription: "Players match emoji faces to feeling words, progressing through increasingly challenging levels. After each level, enjoy a calming breathing exercise before continuing. Encouraging messages and a friendly UI make learning about emotions fun and positive!"
   }
 ]; 

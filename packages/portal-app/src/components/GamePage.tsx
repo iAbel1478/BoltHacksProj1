@@ -13,6 +13,7 @@ import CosmicConstellationEmbed from './CosmicConstellationEmbed';
 import BallCityBounceEmbed from './BallCityBounceEmbed';
 import EmojiInternetAdventuresEmbed from './EmojiInternetAdventuresEmbed';
 import EscapeLabAcademyEmbed from './EscapeLabAcademyEmbed';
+import FeelGoodFriendsEmbed from './FeelGoodFriendsEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -71,6 +72,11 @@ const GamePage: React.FC = () => {
   // If it's the Escape Lab Academy game (ID 11), render the embedded game
   if (game?.id === 11) {
     return <EscapeLabAcademyEmbed />;
+  }
+
+  // If it's the Feel Good Friends Match game (ID 12), render the embedded game
+  if (game?.id === 12) {
+    return <FeelGoodFriendsEmbed />;
   }
 
   const handlePlayClick = () => {
