@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Comic+Neue:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 30 20% 96%;
+    --foreground: 25 25% 15%;
+
+    --card: 30 20% 98%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 30 20% 98%;
+    --popover-foreground: 25 25% 15%;
+
+    --primary: 30 35% 45%;
+    --primary-foreground: 30 20% 98%;
+
+    --secondary: 35 20% 88%;
+    --secondary-foreground: 25 25% 15%;
+
+    --muted: 35 15% 92%;
+    --muted-foreground: 25 15% 45%;
+
+    --accent: 45 40% 75%;
+    --accent-foreground: 25 25% 15%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 30 20% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 30 35% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 30 20% 96%;
+    --sidebar-foreground: 25 25% 15%;
+    --sidebar-primary: 30 35% 45%;
+    --sidebar-primary-foreground: 30 20% 98%;
+    --sidebar-accent: 35 20% 88%;
+    --sidebar-accent-foreground: 25 25% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 30 35% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-wood-50 via-biblical-cream to-wood-100 text-foreground;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive, system-ui;
+  }
+}
+
+@layer components {
+  .bubble-text {
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .wood-gradient {
+    background: linear-gradient(135deg, #d69668 0%, #c97c47 25%, #b66a3c 50%, #975534 75%, #7a4530 100%);
+  }
+  
+  .scroll-border {
+    border: 3px solid #b66a3c;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #f9ede1, #f1d7c2);
+    box-shadow: 
+      inset 0 2px 4px rgba(255,255,255,0.3),
+      0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .biblical-button {
+    background: linear-gradient(145deg, #d4af37, #b8941f);
+    border: 2px solid #b8941f;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+  }
+  
+  .biblical-button:hover {
+    background: linear-gradient(145deg, #b8941f, #d4af37);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+}

@@ -15,6 +15,7 @@ import EmojiInternetAdventuresEmbed from './EmojiInternetAdventuresEmbed';
 import EscapeLabAcademyEmbed from './EscapeLabAcademyEmbed';
 import FeelGoodFriendsEmbed from './FeelGoodFriendsEmbed';
 import GermBlasterEmbed from './GermBlasterEmbed';
+import LfcBibleKidsQuestEmbed from './LfcBibleKidsQuestEmbed';
 
 const GamePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -83,6 +84,11 @@ const GamePage: React.FC = () => {
   // If it's the Germ Blaster Quiz Wars game (ID 13), render the embedded game
   if (game?.id === 13) {
     return <GermBlasterEmbed />;
+  }
+
+  // If it's the LFC Bible Kids Quest game (ID 14), render the embedded game
+  if (game?.id === 14) {
+    return <LfcBibleKidsQuestEmbed />;
   }
 
   const handlePlayClick = () => {

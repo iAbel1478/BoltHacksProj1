@@ -229,5 +229,30 @@ export const allGames: Game[] = [
       "Hand-eye coordination"
     ],
     gameplayDescription: "Players shoot at invading germs and answer quiz questions to defeat them. Each level features new types of germs and health challenges. Use power-ups, keep your health bar up, and become the ultimate Germ Blaster!"
+  },
+  {
+    id: 14,
+    title: "LFC Bible Kids Quest",
+    character: "Bible Explorer",
+    category: "Faith & Knowledge",
+    image: "https://em-content.zobj.net/source/microsoft-teams/363/open-book_1f4d6.png",
+    description: "Quiz your way through Bible stories and wisdom!",
+    rating: 4.8,
+    ageRange: "6-14",
+    isNew: true,
+    longDescription: "Embark on a faith-filled adventure with LFC Bible Kids Quest! Test your knowledge of Bible stories, characters, and wisdom through fun quizzes and interactive challenges. Each level brings new questions and biblical encouragement!",
+    learningObjectives: [
+      "Bible story knowledge",
+      "Faith-based learning",
+      "Critical thinking",
+      "Memory recall"
+    ],
+    skills: [
+      "Quiz skills",
+      "Reading comprehension",
+      "Memory",
+      "Spiritual growth"
+    ],
+    gameplayDescription: "Players answer quiz questions about Bible stories, characters, and teachings. Progress through levels, earn stars, and discover new facts about the Bible in a supportive, faith-based environment!"
   }
 ]; 
