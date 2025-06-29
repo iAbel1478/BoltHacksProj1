@@ -149,5 +149,20 @@ export const allGames: Game[] = [
     learningObjectives: ["Physics understanding", "Hand-eye coordination", "Strategic thinking", "Sports skills"],
     skills: ["Coordination", "Physics concepts", "Sports knowledge", "Problem-solving"],
     gameplayDescription: "Players will learn about trajectory, momentum, and gravity while practicing basketball shooting. The game features realistic physics, customizable basketball skins, and NBA player comparisons to make learning fun and engaging."
+  },
+  {
+    id: 10,
+    title: "Emoji Internet Adventures",
+    character: "Tech Safety Guide",
+    category: "Digital Safety",
+    image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=400",
+    description: "Learn internet safety rules with adorable animal friends and emoji characters!",
+    rating: 4.9,
+    ageRange: "5-10",
+    isNew: true,
+    longDescription: "Join Whiskers the Cat, Buddy the Puppy, and other lovable animal friends as they teach you essential internet safety rules! This interactive adventure combines fun storytelling with important digital safety lessons that every child should know.",
+    learningObjectives: ["Internet safety awareness", "Digital citizenship", "Online privacy", "Cyberbullying prevention"],
+    skills: ["Digital literacy", "Critical thinking", "Safety awareness", "Responsible online behavior"],
+    gameplayDescription: "Players will meet 12 different animal characters, each teaching a specific internet safety rule through engaging stories and interactive lessons. Complete the adventure to master all the essential rules for staying safe online!"
   }
 ]; 
