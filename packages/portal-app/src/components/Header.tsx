@@ -20,6 +20,21 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
 
   return (
     <header className="relative bg-gradient-to-r from-orange-400 via-yellow-400 to-pink-400 shadow-2xl border-b-4 border-yellow-300">
+      {/* Bolt Badge - fixed top right */}
+      <a
+        href="https://bolt.new/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed z-50 top-4 right-4 md:top-6 md:right-8"
+        style={{ display: 'block' }}
+        aria-label="Built with Bolt.new"
+      >
+        <img
+          src="/bolt-badge-white-circle.svg"
+          alt="Built with Bolt.new"
+          className="w-16 h-16 md:w-20 md:h-20 drop-shadow-xl hover:scale-105 transition-transform duration-200"
+        />
+      </a>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
