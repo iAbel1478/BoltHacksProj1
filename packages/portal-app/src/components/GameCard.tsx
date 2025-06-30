@@ -84,10 +84,6 @@ const GameCard: React.FC<GameCardProps> = ({ game, isCarousel = false }) => {
           <span className={`${getCharacterColor(game.character)} text-white text-xs font-black px-3 py-1 rounded-full shadow-lg border border-yellow-200`}>
             {game.character}
           </span>
-          <div className="flex items-center space-x-1">
-            <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="text-sm text-gray-600 font-semibold">{game.rating}</span>
-          </div>
         </div>
 
         <h3 className="font-black text-gray-800 mb-2 text-lg leading-tight" style={{ fontFamily: 'Comic Sans MS, cursive' }}>

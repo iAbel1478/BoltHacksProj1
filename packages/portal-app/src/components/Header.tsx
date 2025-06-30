@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Menu, X, Home } from 'lucide-react';
+import { allGames } from '../data/games-with-geography';
 
 interface HeaderProps {
   onSearch: (query: string) => void;
@@ -15,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
     onSearch(searchQuery);
   };
 
-  const categories = ['All Games', 'Daniel Tiger', 'Wild Kratts', 'Curious George', 'Carl the Collector', 'Lyla in the Loop', 'Arthur'];
+  const categories = ['All Games', ...allGames.slice(0, 3).map(game => game.title)];
 
   return (
     <header className="relative bg-gradient-to-r from-orange-400 via-yellow-400 to-pink-400 shadow-2xl border-b-4 border-yellow-300">
@@ -23,9 +24,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-lg border-2 border-yellow-300">
-              <span className="text-white font-black text-xl">LL</span>
-            </div>
+            <span className="text-3xl" role="img" aria-label="Leopard Paw Print">🐾</span>
             <h1 className="text-2xl font-black text-white drop-shadow-lg" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
               Learning Leopards
             </h1>

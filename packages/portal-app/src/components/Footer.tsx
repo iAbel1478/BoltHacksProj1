@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
           {/* Learning Leopards Logo and Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-4 mb-6">
-              <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-full w-16 h-16 flex items-center justify-center shadow-xl border-4 border-yellow-300">
-                <span className="text-white font-black text-sm text-center">Learning<br/>Leopards</span>
+              <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-full w-16 h-16 flex items-center justify-center shadow-xl border-4 border-yellow-300 overflow-hidden">
+                <img src="learning-leopard2.jpeg" alt="Learning Leopards Logo" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h3 className="text-3xl font-black drop-shadow-lg" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
@@ -52,17 +52,17 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Characters */}
+          {/* Games */}
           <div>
             <h4 className="text-xl font-black mb-6 text-yellow-200 drop-shadow-lg" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-              🦁 Popular Characters
+              🏆 Popular Games
             </h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🐯 Daniel Tiger</a></li>
-              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🐾 Wild Kratts</a></li>
-              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🐒 Curious George</a></li>
-              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>📦 Carl the Collector</a></li>
-              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🔄 Lyla in the Loop</a></li>
+              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🗺️ World Click Explorer</a></li>
+              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🎨 Quite Artsy Quiz Palooza</a></li>
+              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🧮 Calc Quest Genius</a></li>
+              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🏕️ Camp Memory Trails</a></li>
+              <li><a href="#" className="text-yellow-100 hover:text-white transition-colors font-semibold hover:scale-105 transform inline-block" style={{ fontFamily: 'Comic Sans MS, cursive' }}>🕵️ Clue Shift Mystery Web</a></li>
             </ul>
           </div>
         </div>
@@ -70,10 +70,10 @@ const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="border-t-4 border-yellow-300 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-yellow-100 text-sm mb-4 md:mb-0 font-semibold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-            © 2025 Learning Leopards. All rights reserved. | Privacy Policy | Terms of Use
+            © 2025 Learning Leopards. All rights reserved.
           </div>
           <div className="text-yellow-100 text-sm font-semibold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-            🎓 Educational content designed for children ages 2-8
+            🎓 Educational content designed for children ages 5-16
           </div>
         </div>
       </div>

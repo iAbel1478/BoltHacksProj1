@@ -65,7 +65,7 @@ export const allGames: Game[] = [
     title: "Camp Memory Trails",
     character: "Memory Explorer",
     category: "Memory & Matching",
-    image: "https://images.pexels.com/photos/163036/memory-memory-game-concentration-play-163036.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "https://images.pexels.com/photos/325807/pexels-photo-325807.jpeg?auto=compress&cs=tinysrgb&w=400",
     description: "Test and train your memory with fun matching challenges in a camp setting!",
     rating: 4.6,
     ageRange: "5-12",
