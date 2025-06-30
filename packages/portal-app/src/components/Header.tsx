@@ -20,12 +20,12 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
 
   return (
     <header className="relative bg-gradient-to-r from-orange-400 via-yellow-400 to-pink-400 shadow-2xl border-b-4 border-yellow-300">
-      {/* Bolt Badge - fixed top right */}
+      {/* Bolt Badge - absolute top right */}
       <a
         href="https://bolt.new/"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed z-50 top-4 right-4 md:top-6 md:right-8"
+        className="absolute z-50 top-4 right-4 md:top-6 md:right-8"
         style={{ display: 'block' }}
         aria-label="Built with Bolt.new"
       >
