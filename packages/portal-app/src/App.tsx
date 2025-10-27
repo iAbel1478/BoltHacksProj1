@@ -8,26 +8,19 @@ import GamePage from './components/GamePage';
 
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState('All Games');
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-  };
-
-  const handleCategoryFilter = (category: string) => {
-    setCategoryFilter(category);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-100 via-yellow-100 to-pink-100">
       <Header 
         onSearch={handleSearch} 
-        onCategoryFilter={handleCategoryFilter} 
       />
       <Hero />
       <GameGrid 
-        searchQuery={searchQuery} 
-        categoryFilter={categoryFilter} 
+        searchQuery={searchQuery}
       />
       <Footer />
     </div>

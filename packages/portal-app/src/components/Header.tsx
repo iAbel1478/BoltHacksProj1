@@ -1,38 +1,46 @@
-import React, { useState } from 'react';
-import { Search, Menu, X, Home } from 'lucide-react';
-import { allGames } from '../data/games-with-geography';
+import React, { useState, useEffect } from 'react';
+import { Search, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   onSearch: (query: string) => void;
-  onCategoryFilter: (category: string) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
+const Header: React.FC<HeaderProps> = ({ onSearch }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  // Trigger search when user stops typing (after 300ms)
+  useEffect(() => {
+    if (typingTimeout) {
+      clearTimeout(typingTimeout);
+    }
+
+    const timeout = setTimeout(() => {
+      onSearch(searchQuery);
+    }, 300);
+
+    setTypingTimeout(timeout);
+
+    return () => {
+      if (typingTimeout) {
+        clearTimeout(typingTimeout);
+      }
+    };
+  }, [searchQuery, onSearch]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     onSearch(searchQuery);
   };
-  
-  const categories = ['All Games', ...allGames.slice(0, 3).map(game => game.title)];
 
   return (
     <header className="relative bg-gradient-to-r from-orange-400 via-yellow-400 to-pink-400 shadow-2xl border-b-4 border-yellow-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center space-x-4">
-            <span className="text-3xl" role="img" aria-label="Leopard Paw Print">🐾</span>
-            <h1 className="text-2xl font-black text-white drop-shadow-lg" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-              Learning Leopards
-            </h1>
-          </div>
-
-          {/* Search Bar */}
-          <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <form onSubmit={handleSearch} className="w-full">
+          {/* Search Bar - Centered */}
+          <div className="hidden md:flex justify-center absolute left-1/2 transform -translate-x-1/2 w-1/2">
+            <form onSubmit={handleSearch} className="w-full max-w-2xl">
               <div className="relative">
                 <input
                   type="text"
@@ -47,18 +55,13 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
             </form>
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-6">
-            <button className="text-white font-black hover:text-yellow-200 transition-colors duration-300" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-              Home
-            </button>
-            <button className="text-white font-black hover:text-yellow-200 transition-colors duration-300" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-              Games
-            </button>
-            <button className="text-white font-black hover:text-yellow-200 transition-colors duration-300" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-              Videos
-            </button>
-          </nav>
+          {/* Logo - Pushed to the right */}
+          <div className="hidden md:flex items-center space-x-4 ml-auto">
+            <span className="text-3xl" role="img" aria-label="Leopard Paw Print">🐾</span>
+            <h1 className="text-2xl font-black text-white drop-shadow-lg whitespace-nowrap" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+              Learning Leopards
+            </h1>
+          </div>
 
           {/* Mobile menu button */}
           <button
@@ -73,25 +76,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
           </button>
         </div>
 
-        {/* Category Filter */}
-        <div className="pb-4">
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => onCategoryFilter(category)}
-                className="bg-white/90 hover:bg-white text-orange-600 font-black px-4 py-2 rounded-full shadow-lg border-2 border-yellow-300 transition-all duration-300 transform hover:scale-105"
-                style={{ fontFamily: 'Comic Sans MS, cursive' }}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border-4 border-yellow-300 mt-4 p-4">
+          <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border-4 border-yellow-200 mt-4 p-4">
             <form onSubmit={handleSearch} className="mb-4">
               <div className="relative">
                 <input
@@ -99,23 +86,17 @@ const Header: React.FC<HeaderProps> = ({ onSearch, onCategoryFilter }) => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search for games..."
-                  className="w-full pl-10 pr-4 py-3 bg-white border-4 border-yellow-300 rounded-full text-gray-800 font-semibold shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-300"
+                  className="w-full pl-10 pr-4 py-3 bg-white border-4 border-yellow-200 rounded-full text-gray-800 font-semibold shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-300"
                   style={{ fontFamily: 'Comic Sans MS, cursive' }}
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-orange-500" />
               </div>
             </form>
-            <nav className="space-y-2">
-              <button className="block w-full text-left text-orange-600 font-black py-2 px-4 rounded-lg hover:bg-orange-100 transition-colors duration-300" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-                Home
-              </button>
-              <button className="block w-full text-left text-orange-600 font-black py-2 px-4 rounded-lg hover:bg-orange-100 transition-colors duration-300" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-                Games
-              </button>
-              <button className="block w-full text-left text-orange-600 font-black py-2 px-4 rounded-lg hover:bg-orange-100 transition-colors duration-300" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
-                Videos
-              </button>
-            </nav>
+            <div className="p-4 text-center">
+              <p className="text-orange-600 font-semibold" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+                Use the search bar to find games
+              </p>
+            </div>
           </div>
         )}
       </div>

@@ -5,23 +5,19 @@ import { allGames } from '../data/games-with-geography';
 
 interface GameGridProps {
   searchQuery: string;
-  categoryFilter: string;
 }
 
-const GameGrid: React.FC<GameGridProps> = ({ searchQuery, categoryFilter }) => {
+const GameGrid: React.FC<GameGridProps> = ({ searchQuery }) => {
   const [visibleCount, setVisibleCount] = useState(50);
 
   const filteredGames = useMemo(() => {
     return allGames.filter(game => {
-      const matchesSearch = searchQuery === '' || 
+      return searchQuery === '' || 
         game.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         game.character.toLowerCase().includes(searchQuery.toLowerCase()) ||
         game.category.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = categoryFilter === 'All Games' || 
-        game.character === categoryFilter;
-      return matchesSearch && matchesCategory;
     });
-  }, [searchQuery, categoryFilter]);
+  }, [searchQuery]);
 
   const visibleGames = filteredGames.slice(0, visibleCount);
 
